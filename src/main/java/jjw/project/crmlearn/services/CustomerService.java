@@ -14,4 +14,6 @@ public interface CustomerService {
 
 	public void addCustomer(Customer theCustomer);
 
+	public Customer getCustomer(String customerId);
+
 }

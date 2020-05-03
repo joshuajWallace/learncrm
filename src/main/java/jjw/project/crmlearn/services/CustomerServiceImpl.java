@@ -42,4 +42,10 @@ public class CustomerServiceImpl implements CustomerService {
 		
 	}
 
+	@Override
+	@Transactional
+	public Customer getCustomer(String customerId) {
+		return customerDOA.getCustomer(customerId);
+	}
+
 }

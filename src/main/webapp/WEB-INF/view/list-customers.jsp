@@ -26,13 +26,19 @@
 				</tr>
 			</thead>
 			<c:forEach var="tempCustomer" items="${customers}">
+				<spring:url var="updateLink" value="update-customer"  >
+					<spring:param name="customerId" value="${tempCustomer.id}"></spring:param>
+				</spring:url>
+				<spring:url var="deleteLink" value="delete-customer">
+				<spring:param name="customerId" value="${tempCustomer.id}"></spring:param>
+				</spring:url>
 				<tr>
 					<td>${tempCustomer.firstName}</td>
 					<td>${tempCustomer.lastName}</td>
 					<td>${tempCustomer.email}</td> 
 					<td>
-						<button class = "in-table-btn" onclick = "window.location.href='update-customer';return false;">Update</button>
-						<button class = "in-table-btn" onclick = "if (!(confirm('Are you sure you want to delete this student?'))){ return false;}else{ window.location.href='delete-customer';return false;}">Delete</button>
+						<button class = "in-table-btn" onclick = "window.location.href = '${updateLink}'">Update</button>
+						<button class = "in-table-btn" onclick = "if (!(confirm('Are you sure you want to delete this customer'))){ return false;}else{ window.location.href='${deleteLink}';return false;}">Delete</button>
 	
 					</td>
 				

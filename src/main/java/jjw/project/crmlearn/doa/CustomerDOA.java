@@ -12,6 +12,8 @@ public interface CustomerDOA {
 	public void deleteCustomer(Customer customer);
 
 	public void updateCustomer(Customer updatedCustomer);
+	
+	public Customer getCustomer(String customerId);
 
 	
 

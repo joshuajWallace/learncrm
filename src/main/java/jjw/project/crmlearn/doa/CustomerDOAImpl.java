@@ -22,7 +22,7 @@ public class CustomerDOAImpl implements CustomerDOA {
 	public List<Customer> getCustomers() {
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		Query<Customer> query = currentSession.createQuery("from Customer", Customer.class);
+		Query<Customer> query = currentSession.createQuery("from Customer order by lastName", Customer.class);
 				
 		return query.getResultList();
 	}
@@ -54,7 +54,14 @@ public class CustomerDOAImpl implements CustomerDOA {
 		currentSession.update(updatedCustomer);
 		
 			
+	}
+
+	@Override
+	public Customer getCustomer(String customerId) {
 		
+		Session currentSession = sessionFactory.getCurrentSession();
+				
+		return currentSession.get(Customer.class, Integer.parseInt(customerId));
 	}
 
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import jjw.project.crmlearn.entity.Customer;
 import jjw.project.crmlearn.services.CustomerService;
@@ -40,18 +41,23 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/update-customer")
-	public String updateCustomer(@ModelAttribute("tempCustomer") Customer theCustomer, Model theModel) {
+	public String updateCustomerForm(@RequestParam("customerId") String customerId, Model theModel) {
+		Customer theCustomer = customerService.getCustomer(customerId);
 		theModel.addAttribute("customer", theCustomer);
 		return "update";
 	}
+	@PostMapping("/update-customer")
+	public String updateCustomer(@ModelAttribute("customer") Customer theCustomer) {
+		customerService.updateCustomer(theCustomer);
+		return "redirect:/customers/list";
+	}
 	
 	@GetMapping("/delete-customer")
-	public String deleteCustomer(@ModelAttribute("tempCustomer") Customer theCustomer, Model theModel) {
+	public String deleteCustomer(@RequestParam("customerId") String customerId, Model theModel) {
+		Customer theCustomer = customerService.getCustomer(customerId);
 		customerService.deleteCustomer(theCustomer);
 		List<Customer> customers = customerService.getCustomers();
 		theModel.addAttribute("customers", customers);
 		return "redirect:/customers/list";
 	}
-	
-
 }
