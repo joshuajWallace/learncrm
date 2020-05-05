@@ -28,6 +28,21 @@ public class CustomerController {
 		return "list-customers";
 	}
 	
+	@GetMapping("/search")
+	public String searchCustomerName(@RequestParam("name") String name, Model theModel){
+		name.strip();
+		String[] names = name.split(" ");
+		List<Customer> customers;
+		if(names.length > 1) {
+			customers = customerService.getCustomers(names[0], names[1]);
+		}
+		else {
+			customers = customerService.getCustomers(names[0]);
+		}
+		theModel.addAttribute("customers", customers);
+		return "list-customers";
+	}
+	
 	@GetMapping("/add-customer")
 	public String addCustomer(Model theModel) {
 		Customer newCustomer = new Customer();

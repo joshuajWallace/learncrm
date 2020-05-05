@@ -15,6 +15,10 @@ public interface CustomerDOA {
 	
 	public Customer getCustomer(String customerId);
 
+	public List<Customer> getCustomers(String firstName, String lastName);
+
+	public List<Customer> getCustomers(String firstName);
+
 	
 
 }

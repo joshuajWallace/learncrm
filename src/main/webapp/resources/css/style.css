@@ -35,7 +35,7 @@ body {
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;
-   height: 20px;
+   height: 65px;
    color: #000000;
    font-family:sans-serif;
    width: 120px;
@@ -49,6 +49,7 @@ body {
    cursor: pointer;
    text-align: center;
    margin: 0 10px 10px 10px;
+   vertical-align: top;
 }
 
 .btn:hover {

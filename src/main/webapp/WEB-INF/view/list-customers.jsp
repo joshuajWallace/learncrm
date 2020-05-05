@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -16,6 +17,12 @@
 		Customer List:
 		</h1>
 		<button class="btn" type="button" onclick="window.location.href='add-customer';return false;">Add Customer</button>
+		<button class="btn" type="button" onclick="window.location.href='list';return false;">View All Customers</button>
+		<form method="get" action ="search" >
+			<label>Search for name: </label>
+			<input name="name" value=""/>
+			<input type="submit" value="search"/>
+		</form>
 		<table>
 			<thead>
 				<tr>

@@ -48,4 +48,16 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerDOA.getCustomer(customerId);
 	}
 
+	@Override
+	@Transactional
+	public List<Customer> getCustomers(String firstName, String lastName) {
+		return customerDOA.getCustomers(firstName, lastName);
+	}
+
+	@Override
+	@Transactional
+	public List<Customer> getCustomers(String firstName) {
+		return customerDOA.getCustomers(firstName);
+	}
+
 }

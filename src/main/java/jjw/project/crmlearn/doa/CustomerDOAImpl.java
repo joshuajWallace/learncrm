@@ -64,4 +64,27 @@ public class CustomerDOAImpl implements CustomerDOA {
 		return currentSession.get(Customer.class, Integer.parseInt(customerId));
 	}
 
+	@Override
+	public List<Customer> getCustomers(String firstName, String lastName) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		Query<Customer> query = currentSession.createQuery("from Customer where firstName= :fname and lastName= :lname order by lastName", Customer.class);
+		query.setParameter("fname", firstName);
+		query.setParameter("lname", lastName);
+		
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Customer> getCustomers(String firstName) {
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		Query<Customer> query = currentSession.createQuery("from Customer  where firstName = :fname order by lastName", Customer.class);
+		query.setParameter("fname", firstName);
+		
+		return query.getResultList();
+	}
+
 }
