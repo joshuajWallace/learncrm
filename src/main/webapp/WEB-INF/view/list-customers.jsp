@@ -16,13 +16,17 @@
 		<br>
 		Customer List:
 		</h1>
-		<button class="btn" type="button" onclick="window.location.href='add-customer';return false;">Add Customer</button>
-		<button class="btn" type="button" onclick="window.location.href='list';return false;">View All Customers</button>
-		<form method="get" action ="search" >
-			<label>Search for name: </label>
-			<input name="name" value=""/>
-			<input type="submit" value="search"/>
-		</form>
+		<div class="wrapper">
+			<button class="btn" type="button" onclick="window.location.href='add-customer';return false;">Add Customer</button>
+			<button class="btn" type="button" onclick="window.location.href='list';return false;" >View All Customers</button>
+			<div class="search">
+					<form action="search">
+						<input name="name" placeholder="Enter Customer Name"/>
+						<button class="button" type="submit">Search</button>
+					</form>
+
+			</div>
+		</div>
 		<table>
 			<thead>
 				<tr>

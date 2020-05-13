@@ -15,7 +15,9 @@
 		<br>
 		Customer 
 		</h1>
-		<button class="btn" type="button" onclick="window.location.href='list';return false;">Back</button>
+		<div class="wrapper">
+		<button class="back-btn" type="button" onclick="window.location.href='list';return false;">Back</button>
+		</div>
 		<div class="form">
 			<form:form method="POST" action="save-customer" modelAttribute="customer">
 				<table>

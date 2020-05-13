@@ -15,7 +15,7 @@
 		<br>
 		Customer 
 		</h1>
-		<button class="btn" type="button" onclick="window.location.href='list';return false;">Back</button>
+		<button class="back-btn" type="button" onclick="window.location.href='list';return false;">Back</button>
 		<div class="form">
 			<form:form method="POST" action="update-customer" modelAttribute="customer">
 			<form:hidden path="id"/>
