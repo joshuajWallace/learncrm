@@ -1,4 +1,4 @@
-package jjw.project.crmlearn;
+package jjw.project.crmlearn.controller;
 
 import java.util.List;
 
