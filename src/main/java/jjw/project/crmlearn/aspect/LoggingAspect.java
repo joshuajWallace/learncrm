@@ -20,37 +20,22 @@ public class LoggingAspect extends DeclarationAspect {
 	public void before(JoinPoint joinPoint) {
 		String method = joinPoint.getSignature().toShortString();
 		myLogger.info("====>> in @Before: calling method: " + method);
+		Object[] args = joinPoint.getArgs();
+		for(Object temp: args) {
+			myLogger.info(" ==>> arugument :" + temp);
+		}
+		
 		
 	}
-	
-	@Before("allDoa()")
-	public void logBeforeDoa() {
-		
-	}
-	@Before("allService()")
-	public void logBeforeService() {
-		
-	}
-	
-	@Before("allController()")
-	public void logBeforeController() {
-		
-	}
-	
 	
 	//afterReturning
-	@AfterReturning("allDoa()")
-	public void logReturnDoa() {
-		
+	@AfterReturning(pointcut ="appFlow()",
+					returning = "result")
+	public void logReturnDoa(JoinPoint joinPoint, Object result) {
+		String method = joinPoint.getSignature().toShortString();
+		myLogger.info("====>> in @AfterReturning: calling method: " + method);
+		myLogger.info("====>> result returned: " + result);
 	}
-	@AfterReturning("allService()")
-	public void logReturnService() {
-		
-	}
-	
-	@AfterReturning("allController()")
-	public void logReturnController() {
-		
-	}
+
 
 }

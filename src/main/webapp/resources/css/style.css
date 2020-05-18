@@ -124,20 +124,20 @@ body {
 	text-decoration: none;
 }
 
-.search{
-	display:block;
+.search-form{
+	display:inline-block;
 	vertical-align:bottom;
 	position:relative;
 	float:right;
-	flex-grow: 1;
+	
 }
-.search input{
+.search-form input{
 	font-size: 1.5rem;
 	position:absolute;
 	right:10rem;
 	bottom:1rem;
 }
-.search button{
+.search-form button{
 -webkit-border-radius: 40px;
    -moz-border-radius: 40px;
    border-radius: 40px;

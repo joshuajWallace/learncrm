@@ -7,18 +7,18 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-public class DeclarationAspect {
+public abstract class DeclarationAspect {
 	
-	@Pointcut("execution(* jjw.project.crmlearn.dao.*.*(..))")
+	@Pointcut("execution(* jjw.project.crmlearn.doa.*.*(..))")
 	public void allDoa() {}
 	
-	@Pointcut("execution(* jjw.project.crmlearn.serice.*.*(..))")
+	@Pointcut("execution(* jjw.project.crmlearn.services.*.*(..))")
 	public void allService() {}
 	
 	@Pointcut("execution(* jjw.project.crmlearn.controller.*.*(..))")
 	public void allController() {}
 	
-	@Pointcut("allController() || allDoa || allService")
+	@Pointcut("allController() || allDoa() || allService()")
 	public void appFlow() {}
 
 }
