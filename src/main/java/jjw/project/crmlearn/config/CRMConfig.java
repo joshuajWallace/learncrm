@@ -24,8 +24,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @EnableJpaRepositories(basePackages ="jjw.project.crmlearn")
 @ComponentScan("jjw.project.crmlearn")
+@EnableAspectJAutoProxy
 @EnableWebMvc
-
 @EnableTransactionManagement
 public class CRMConfig implements WebMvcConfigurer{
 	
