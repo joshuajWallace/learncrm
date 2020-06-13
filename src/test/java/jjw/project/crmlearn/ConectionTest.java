@@ -10,7 +10,7 @@ public class ConectionTest {
 		String user = "springstudent";
 		String pass = "springstudent";
 		
-		String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC";
+		String jdbcUrl = "jdbc:mysql://192.168.99.100:3306/web_customer_tracker?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC";
 		String driver = "com.mysql.cj.jdbc.Driver";
 		
 		// get connection to database
