@@ -1,4 +1,5 @@
-FROM tomcat:10.0-jdk11-openjdk
+FROM tomcat:9.0-jdk11-openjdk
 LABEL maintainer="Joshua Wallace"
-COPY jjw.project.crmlearn-1.0-SNAPSHOT.war /usr/local/tomcat/webapp
-CMD [ "/usr/local/tomcat/bin/startup.sh" ]
+EXPOSE 8080
+COPY ./jjw.project.crmlearn-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
+CMD [ "catalina.sh", "run" ]
