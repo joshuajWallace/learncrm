@@ -1,5 +1,5 @@
 h1 {
-	background-color: #00b300;
+	background-color: #0063B2;
 	margin:0 0 1rem 0;
 	padding: 10px 0 20px 10px;
 	border-top:solid;
@@ -22,7 +22,7 @@ tr{
 }
 
 thead {
-	background-color: #00b300;
+	background-color: #0063B2;
 	padding: 10px;
 }
 body {
@@ -42,7 +42,7 @@ body {
    font-size: 14px;
    font-weight: 100;
    padding: 0.5rem 2rem 2rem 2rem;
-   background-color: #00b300;
+   background-color: #0063B2FF;
    border: solid #337FED 1px;
    text-decoration: none;
    display: inline-block;
@@ -54,7 +54,7 @@ body {
 
 .btn:hover {
    border: solid #337FED 1px;
-   background: #80ff80;
+   background: #0063B2FF;
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;
@@ -73,7 +73,7 @@ body {
    font-weight: 100;
    padding: 0.5rem 1rem 0.5rem 1rem;
    margin:10px;
-   background-color: #00b300;
+   background-color: #0063B2FF;
    border: solid #337FED 1px;
    text-decoration: none;
    display: inline-block;
@@ -84,7 +84,7 @@ body {
 	}
 .in-table-btn:hover{
 	border: solid #337FED 1px;
-	background: #80ff80;
+	background: #0063B2FF;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
@@ -106,7 +106,7 @@ body {
    font-size: 14px;
    font-weight: 100;
    padding: 1rem 2rem 2rem 2rem;
-   background-color: #00b300;
+   background-color: #0063B2FF;
    border: solid #337FED 1px;
    text-decoration: none;
    display: inline-block;
@@ -117,7 +117,7 @@ body {
 }
 .back-btn:hover{
 	border: solid #337FED 1px;
-	background: #80ff80;
+	background: #0063B2FF;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
@@ -148,7 +148,7 @@ body {
    font-size: 14px;
    font-weight: 100;
    padding: 1rem 2rem 2rem 2rem;
-   background-color: #00b300;
+   background-color: #0063B2FF;
    border: solid #337FED 1px;
    text-decoration: none;
    display: inline-block;
@@ -159,7 +159,7 @@ body {
 }
 .search button:hover{
 	border: solid #337FED 1px;
-	background: #80ff80;
+	background: #0063B2FF;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
@@ -180,7 +180,7 @@ body {
    font-size: 14px;
    font-weight: 100;
    padding: 1rem 0px 2rem 0px;
-   background-color: #00b300;
+   background-color: #0063B2FF;
    border: solid #337FED 1px;
    text-decoration: none;
    display: inline-block;
@@ -192,7 +192,7 @@ body {
 	}
 	.submit-btn:hover{
 	border: solid #337FED 1px;
-	background: #80ff80;
+	background: #0063B2FF;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
