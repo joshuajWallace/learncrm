@@ -44,7 +44,7 @@ public class CustomerController {
 		return "list-customers";
 	}
 	
-	@GetMapping("/add-customer")
+	@GetMapping("/add-new-customer")
 	public String addCustomer(Model theModel) {
 		Customer newCustomer = new Customer();
 		theModel.addAttribute("customer", newCustomer);

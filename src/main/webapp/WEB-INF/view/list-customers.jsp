@@ -17,7 +17,7 @@
 		Customer List:
 		</h1>
 		<div class="wrapper">
-			<button class="btn" type="button" onclick="window.location.href='add-customer';return false;">Add Customer</button>
+			<button class="btn" type="button" onclick="window.location.href='add-new-customer';return false;">Add Customer</button>
 			<button class="btn" type="button" onclick="window.location.href='list';return false;" >View All Customers</button>
 			<form action="search" class="search-form">
 					<input name="name" placeholder="Enter Customer Name"/>
